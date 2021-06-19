@@ -44,19 +44,32 @@ namespace Calculadora
         {
             get { 
                 
-                if(this.Operador == "*"){
+                    if(this.Operador == "*"){
 
-                   this.Multiplicar();
-                   return this._resultado; 
+                        this.Multiplicar();
+                        return this._resultado; 
 
-                }
+                    }
                 
-                if(this.Operador == "/")
+                    if(this.Operador == "/"){
 
-                    this.Dividir();
-                    return this._resultado;
+                        this.Dividir();
+                        return this._resultado;
+                    }
+
+                    if(this.Operador == "+"){
+
+                        this.Somar();
+                        return this._resultado;
+                    }
+
+                    if(this.Operador == "-")
+
+                        this.Diminuir();
+                        return this._resultado;
+                    
                 }
-            //set { myVar = value; }
+
         }
         
 
@@ -64,7 +77,7 @@ namespace Calculadora
         public void Multiplicar(){
 
                this._resultado = this.Valor1 * this.Valor2;
-               //return multiplicar;
+               
                    
         }
 
@@ -72,11 +85,22 @@ namespace Calculadora
         public void Dividir(){
 
             this._resultado = this.Valor1 / this.Valor2;
-            //return dividir;
+            
+        }
+
+        //Somar
+        public void Somar(){
+
+            this._resultado = this.Valor1 + this.Valor2;
+            
+        }
+
+        //Método Diminuir
+        public void Diminuir(){
+
+            this._resultado = this.Valor1 - this.Valor2;
+            
         }
 
         }     
     }
-
-
-
