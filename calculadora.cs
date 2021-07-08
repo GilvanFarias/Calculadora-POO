@@ -5,6 +5,16 @@ namespace Calculadora
 {
     public class Calculadora
     {
+        //implementando construtor
+        public Calculadora(double _valor1, string _operador, double _valor2){
+
+            this.Valor1 = _valor1;
+            this.Operador = _operador;
+            this.Valor2 = _valor2;
+            
+
+        }
+
         private Double _valor1;
         public Double Valor1
         {
